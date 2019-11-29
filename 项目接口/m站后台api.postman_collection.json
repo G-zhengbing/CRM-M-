@@ -1,0 +1,624 @@
+{
+	"info": {
+		"_postman_id": "5e846dfe-745d-4947-82a7-2505d48d5efa",
+		"name": "m站后台api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "注册后附加信息",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "age",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "sex",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "grade",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "school",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://0.0.0.0:3000/api/account_info/42"
+			},
+			"response": []
+		},
+		{
+			"name": "banner",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8wLjAuMC4wOjMwMDBcL2FwaVwvbG9naW4iLCJpYXQiOjE1NzQwNTc4MDksImV4cCI6MTU3NDA2MTQwOSwibmJmIjoxNTc0MDU3ODA5LCJqdGkiOiJIajFYb1FsNzRXVGQ1ZmZ5Iiwic3ViIjoxLCJwcnYiOiI0YzE5OWU3NGQ3Zjc1MzcwNGU0MTc1NjY0MGMyMmVkYmEyOWFlNWY1In0.9DMbfyEif4LhqyZa7VH_eoVVfGViyr-rU8a1xeb9UyQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://0.0.0.0:3000/api/banner?title=你",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"banner"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "你"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "创建广告",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8wLjAuMC4wOjMwMDBcL2FwaVwvbG9naW4iLCJpYXQiOjE1NzQxNTc4MDIsImV4cCI6MTU3NDE2MTQwMiwibmJmIjoxNTc0MTU3ODAyLCJqdGkiOiJBczJoak5JdnFvY0s3OWE5Iiwic3ViIjoxLCJwcnYiOiI0YzE5OWU3NGQ3Zjc1MzcwNGU0MTc1NjY0MGMyMmVkYmEyOWFlNWY1In0.Wkpkyx1fF6Tc2Pn1074RCsSmsMdhs5YnmJqa6fZYy78",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "banner_pic",
+							"type": "file",
+							"src": "/Users/jsj/Downloads/CRM-3/images/待办客户/u171.png"
+						},
+						{
+							"key": "link_url",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "sort",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://0.0.0.0:3000/api/ad"
+			},
+			"response": []
+		},
+		{
+			"name": "删除banner",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8wLjAuMC4wOjMwMDBcL2FwaVwvbG9naW4iLCJpYXQiOjE1NzQwNjYzMzcsImV4cCI6MTU3NDA2OTkzNywibmJmIjoxNTc0MDY2MzM3LCJqdGkiOiI4eVRsaHMzakJvZ01NY2luIiwic3ViIjoxLCJwcnYiOiI0YzE5OWU3NGQ3Zjc1MzcwNGU0MTc1NjY0MGMyMmVkYmEyOWFlNWY1In0.8dVVkNOmlUrL8qZrRUQFCgjDAZ4WS0bDXWve2IU5RbU",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "banner_id[]",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://0.0.0.0:3000/api/delete_banner"
+			},
+			"response": []
+		},
+		{
+			"name": "banner上下线",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8wLjAuMC4wOjMwMDBcL2FwaVwvbG9naW4iLCJpYXQiOjE1NzQxNTc4MDIsImV4cCI6MTU3NDE2MTQwMiwibmJmIjoxNTc0MTU3ODAyLCJqdGkiOiJBczJoak5JdnFvY0s3OWE5Iiwic3ViIjoxLCJwcnYiOiI0YzE5OWU3NGQ3Zjc1MzcwNGU0MTc1NjY0MGMyMmVkYmEyOWFlNWY1In0.Wkpkyx1fF6Tc2Pn1074RCsSmsMdhs5YnmJqa6fZYy78",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "status",
+							"value": "2",
+							"description": "1 已上线 2 已下线",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://0.0.0.0:3000/api/line/3"
+			},
+			"response": []
+		},
+		{
+			"name": "修改banner",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8wLjAuMC4wOjMwMDBcL2FwaVwvbG9naW4iLCJpYXQiOjE1NzQxNTc4MDIsImV4cCI6MTU3NDE2MTQwMiwibmJmIjoxNTc0MTU3ODAyLCJqdGkiOiJBczJoak5JdnFvY0s3OWE5Iiwic3ViIjoxLCJwcnYiOiI0YzE5OWU3NGQ3Zjc1MzcwNGU0MTc1NjY0MGMyMmVkYmEyOWFlNWY1In0.Wkpkyx1fF6Tc2Pn1074RCsSmsMdhs5YnmJqa6fZYy78",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "1222",
+							"type": "text"
+						},
+						{
+							"key": "banner_pic",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "link_url",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "sort",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://0.0.0.0:3000/api/modify_banner/3",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"modify_banner",
+						"3"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "专题",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8wLjAuMC4wOjMwMDBcL2FwaVwvbG9naW4iLCJpYXQiOjE1NzQxNTc4MDIsImV4cCI6MTU3NDE2MTQwMiwibmJmIjoxNTc0MTU3ODAyLCJqdGkiOiJBczJoak5JdnFvY0s3OWE5Iiwic3ViIjoxLCJwcnYiOiI0YzE5OWU3NGQ3Zjc1MzcwNGU0MTc1NjY0MGMyMmVkYmEyOWFlNWY1In0.Wkpkyx1fF6Tc2Pn1074RCsSmsMdhs5YnmJqa6fZYy78",
+						"type": "text"
+					}
+				],
+				"url": "http://0.0.0.0:3000/api/event"
+			},
+			"response": []
+		},
+		{
+			"name": "新建专题",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8wLjAuMC4wOjMwMDBcL2FwaVwvbG9naW4iLCJpYXQiOjE1NzQxNTc4MDIsImV4cCI6MTU3NDE2MTQwMiwibmJmIjoxNTc0MTU3ODAyLCJqdGkiOiJBczJoak5JdnFvY0s3OWE5Iiwic3ViIjoxLCJwcnYiOiI0YzE5OWU3NGQ3Zjc1MzcwNGU0MTc1NjY0MGMyMmVkYmEyOWFlNWY1In0.Wkpkyx1fF6Tc2Pn1074RCsSmsMdhs5YnmJqa6fZYy78",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "subtitle",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "event_pic",
+							"type": "file",
+							"src": "/Users/jsj/Downloads/CRM-3/images/待办客户/u173.png"
+						},
+						{
+							"key": "content",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://0.0.0.0:3000/api/store_event"
+			},
+			"response": []
+		},
+		{
+			"name": "删除专题",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8wLjAuMC4wOjMwMDBcL2FwaVwvbG9naW4iLCJpYXQiOjE1NzQxNTc4MDIsImV4cCI6MTU3NDE2MTQwMiwibmJmIjoxNTc0MTU3ODAyLCJqdGkiOiJBczJoak5JdnFvY0s3OWE5Iiwic3ViIjoxLCJwcnYiOiI0YzE5OWU3NGQ3Zjc1MzcwNGU0MTc1NjY0MGMyMmVkYmEyOWFlNWY1In0.Wkpkyx1fF6Tc2Pn1074RCsSmsMdhs5YnmJqa6fZYy78",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "event_id[]",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://0.0.0.0:3000/api/delete_event"
+			},
+			"response": []
+		},
+		{
+			"name": "专题上下线",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8wLjAuMC4wOjMwMDBcL2FwaVwvbG9naW4iLCJpYXQiOjE1NzQxNTc4MDIsImV4cCI6MTU3NDE2MTQwMiwibmJmIjoxNTc0MTU3ODAyLCJqdGkiOiJBczJoak5JdnFvY0s3OWE5Iiwic3ViIjoxLCJwcnYiOiI0YzE5OWU3NGQ3Zjc1MzcwNGU0MTc1NjY0MGMyMmVkYmEyOWFlNWY1In0.Wkpkyx1fF6Tc2Pn1074RCsSmsMdhs5YnmJqa6fZYy78",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "status",
+							"value": "2",
+							"description": " 1已上线 2 已下线",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://0.0.0.0:3000/api/line_event/2"
+			},
+			"response": []
+		},
+		{
+			"name": "修改专题",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8wLjAuMC4wOjMwMDBcL2FwaVwvbG9naW4iLCJpYXQiOjE1NzQxNTc4MDIsImV4cCI6MTU3NDE2MTQwMiwibmJmIjoxNTc0MTU3ODAyLCJqdGkiOiJBczJoak5JdnFvY0s3OWE5Iiwic3ViIjoxLCJwcnYiOiI0YzE5OWU3NGQ3Zjc1MzcwNGU0MTc1NjY0MGMyMmVkYmEyOWFlNWY1In0.Wkpkyx1fF6Tc2Pn1074RCsSmsMdhs5YnmJqa6fZYy78",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "a",
+							"type": "text"
+						},
+						{
+							"key": "subtitle",
+							"value": "a",
+							"type": "text"
+						},
+						{
+							"key": "event_pic",
+							"type": "file",
+							"src": "/Users/jsj/Downloads/CRM-3/images/待办客户/u171.png"
+						},
+						{
+							"key": "content",
+							"value": "a",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://0.0.0.0:3000/api/modify_event/2"
+			},
+			"response": []
+		},
+		{
+			"name": "资料",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8wLjAuMC4wOjMwMDBcL2FwaVwvbG9naW4iLCJpYXQiOjE1NzQzMTI4MDcsImV4cCI6MTU3NDMxNjQwNywibmJmIjoxNTc0MzEyODA3LCJqdGkiOiJNUVpMN1dURE9tblk0TXpRIiwic3ViIjoxLCJwcnYiOiI0YzE5OWU3NGQ3Zjc1MzcwNGU0MTc1NjY0MGMyMmVkYmEyOWFlNWY1In0.Ujd7UXMRwySQG6CZxPXVmuMh_81uzY1W136Ex76j6sU",
+						"type": "text"
+					}
+				],
+				"url": "http://0.0.0.0:3000/api/materials"
+			},
+			"response": []
+		},
+		{
+			"name": "新建资料",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8wLjAuMC4wOjMwMDBcL2FwaVwvbG9naW4iLCJpYXQiOjE1NzQzMTI4MDcsImV4cCI6MTU3NDMxNjQwNywibmJmIjoxNTc0MzEyODA3LCJqdGkiOiJNUVpMN1dURE9tblk0TXpRIiwic3ViIjoxLCJwcnYiOiI0YzE5OWU3NGQ3Zjc1MzcwNGU0MTc1NjY0MGMyMmVkYmEyOWFlNWY1In0.Ujd7UXMRwySQG6CZxPXVmuMh_81uzY1W136Ex76j6sU",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "materials_name",
+							"value": "资料",
+							"type": "text"
+						},
+						{
+							"key": "subject",
+							"value": "1",
+							"description": "1 数学 2 英语",
+							"type": "text"
+						},
+						{
+							"key": "grade",
+							"value": "2",
+							"description": "1-9年级",
+							"type": "text"
+						},
+						{
+							"key": "is_hot",
+							"value": "1",
+							"description": "0 首页不展示 1 首页展示",
+							"type": "text"
+						},
+						{
+							"key": "file_url",
+							"type": "file",
+							"src": "/Users/jsj/learn/PHP_UT_进阶1.pdf"
+						}
+					]
+				},
+				"url": "http://0.0.0.0:3000/api/store_material"
+			},
+			"response": []
+		},
+		{
+			"name": "删除资料",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8wLjAuMC4wOjMwMDBcL2FwaVwvbG9naW4iLCJpYXQiOjE1NzQzMTI4MDcsImV4cCI6MTU3NDMxNjQwNywibmJmIjoxNTc0MzEyODA3LCJqdGkiOiJNUVpMN1dURE9tblk0TXpRIiwic3ViIjoxLCJwcnYiOiI0YzE5OWU3NGQ3Zjc1MzcwNGU0MTc1NjY0MGMyMmVkYmEyOWFlNWY1In0.Ujd7UXMRwySQG6CZxPXVmuMh_81uzY1W136Ex76j6sU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "material_id[]",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://0.0.0.0:3000/api/delete_material"
+			},
+			"response": []
+		},
+		{
+			"name": "是否首页显示",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8wLjAuMC4wOjMwMDBcL2FwaVwvbG9naW4iLCJpYXQiOjE1NzQzMTQ5NzAsImV4cCI6MTU3NDMxODU3MCwibmJmIjoxNTc0MzE0OTcwLCJqdGkiOiI1NHJmVktBc1dTWDl1dWxhIiwic3ViIjoxLCJwcnYiOiI0YzE5OWU3NGQ3Zjc1MzcwNGU0MTc1NjY0MGMyMmVkYmEyOWFlNWY1In0.5U6UY4rjMEjbZ0rUd44OEVrD84vvKW99VfHbA-Fa88I",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "is_hot",
+							"value": "1",
+							"description": "0 首页不展示 1 首页展示",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://0.0.0.0:3000/api/line_material/1"
+			},
+			"response": []
+		},
+		{
+			"name": "修改资料",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8wLjAuMC4wOjMwMDBcL2FwaVwvbG9naW4iLCJpYXQiOjE1NzQzMTY4MzQsImV4cCI6MTU3NDMyMDQzNCwibmJmIjoxNTc0MzE2ODM0LCJqdGkiOiJnNWw4WjVVcm83QXdFZUF0Iiwic3ViIjoxLCJwcnYiOiI0YzE5OWU3NGQ3Zjc1MzcwNGU0MTc1NjY0MGMyMmVkYmEyOWFlNWY1In0.QUEgbk3S-80_VcyjJyiwik2ydXzg4Uq6H7XwUS6LZow",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "materials_name",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "subject",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "grade",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "is_hot",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "file_url",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": "http://0.0.0.0:3000/api/modify_material/1"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

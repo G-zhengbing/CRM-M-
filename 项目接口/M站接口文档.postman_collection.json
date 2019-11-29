@@ -1,0 +1,322 @@
+{
+	"info": {
+		"_postman_id": "58b56209-5be8-4494-9813-486ed805dda6",
+		"name": "M站接口文档",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "新建课程",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9saXZlYXBpLmNhbnBvaW50Lm5ldFwvYXBpXC9sb2dpbiIsImlhdCI6MTU3NDIzNzUyOCwiZXhwIjoxNTc0MjQxMTI4LCJuYmYiOjE1NzQyMzc1MjgsImp0aSI6Ilp5WjVudFBTTWgwRTJuOE4iLCJzdWIiOjEsInBydiI6IjRjMTk5ZTc0ZDdmNzUzNzA0ZTQxNzU2NjQwYzIyZWRiYTI5YWU1ZjUifQ.0hYFaOpVbBRpujO-acQp7XhO-iI8Tf5810RaBOACpA4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "type",
+							"value": "1",
+							"description": "1 直播 2微课",
+							"type": "text"
+						},
+						{
+							"key": "grade",
+							"value": "9",
+							"description": "1-9  年级 ",
+							"type": "text"
+						},
+						{
+							"key": "course_name",
+							"value": "测试",
+							"description": "课程名称",
+							"type": "text"
+						},
+						{
+							"key": "subject",
+							"value": "1",
+							"description": "科目 1语 2数 3外 4物 5化",
+							"type": "text"
+						},
+						{
+							"key": "images_1",
+							"type": "file",
+							"src": ""
+						},
+						{
+							"key": "images_2",
+							"type": "file",
+							"src": ""
+						},
+						{
+							"key": "images_3",
+							"type": "file",
+							"src": "",
+							"disabled": true
+						},
+						{
+							"key": "product_content",
+							"value": "这个课程是测试用的",
+							"description": "课程详情",
+							"type": "text"
+						},
+						{
+							"key": "start_date",
+							"value": "2019-01-01",
+							"type": "text"
+						},
+						{
+							"key": "end_date",
+							"value": "2019-01-01",
+							"description": "年月日 2019-01-01",
+							"type": "text"
+						},
+						{
+							"key": "week_day",
+							"value": "1",
+							"description": "1-7 周几 ",
+							"type": "text"
+						},
+						{
+							"key": "start_time",
+							"value": "12:00:00",
+							"description": "时:分:秒 12:00:00",
+							"type": "text"
+						},
+						{
+							"key": "end_time",
+							"value": "13:00:00",
+							"description": "时:分:秒 12:00:00",
+							"type": "text"
+						},
+						{
+							"key": "class_hour",
+							"value": "1",
+							"description": "1-100课节数",
+							"type": "text"
+						},
+						{
+							"key": "sale_price",
+							"value": "100",
+							"description": "售价",
+							"type": "text"
+						},
+						{
+							"key": "activity_price",
+							"value": "98",
+							"description": "活动价",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://www.local.com/index.php/api/create_products",
+					"protocol": "http",
+					"host": [
+						"www",
+						"local",
+						"com"
+					],
+					"path": [
+						"index.php",
+						"api",
+						"create_products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "课程列表",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9saXZlYXBpLmNhbnBvaW50Lm5ldFwvYXBpXC9sb2dpbiIsImlhdCI6MTU3NDI0MTgzMiwiZXhwIjoxNTc0MjQ1NDMyLCJuYmYiOjE1NzQyNDE4MzIsImp0aSI6Ik41Z2hBMUE1TnJaSTB0MlUiLCJzdWIiOjEsInBydiI6IjRjMTk5ZTc0ZDdmNzUzNzA0ZTQxNzU2NjQwYzIyZWRiYTI5YWU1ZjUifQ.mIRvWigNer873V6Zj9F5vt5F8QP54sjHWwHvlpFmTME",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "page",
+							"value": "2",
+							"description": "页码 ",
+							"type": "text"
+						},
+						{
+							"key": "course_name",
+							"value": "",
+							"description": "课程名称",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "",
+							"description": "1 直播 2 微课",
+							"type": "text"
+						},
+						{
+							"key": "subject",
+							"value": "",
+							"description": "科目 1语 2数 3外 4物 5化",
+							"type": "text"
+						},
+						{
+							"key": "grade",
+							"value": "",
+							"description": "1-9  年级 ",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://www.local.com/index.php/api/product_list",
+					"protocol": "http",
+					"host": [
+						"www",
+						"local",
+						"com"
+					],
+					"path": [
+						"index.php",
+						"api",
+						"product_list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "修改课程首页显示状态",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9saXZlYXBpLmNhbnBvaW50Lm5ldFwvYXBpXC9sb2dpbiIsImlhdCI6MTU3NDMwMzM3MCwiZXhwIjoxNTc0MzA2OTcwLCJuYmYiOjE1NzQzMDMzNzAsImp0aSI6IlhxMGJ2RlFSclRPUlh0bksiLCJzdWIiOjEsInBydiI6IjRjMTk5ZTc0ZDdmNzUzNzA0ZTQxNzU2NjQwYzIyZWRiYTI5YWU1ZjUifQ.K-cZoNWUeCBHn24Es5GxqFSpkpBYVteKtCMyAPt_Uqc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://www.local.com/index.php/api/update_show?id=1&type=1",
+					"protocol": "http",
+					"host": [
+						"www",
+						"local",
+						"com"
+					],
+					"path": [
+						"index.php",
+						"api",
+						"update_show"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1",
+							"description": "课程ID"
+						},
+						{
+							"key": "type",
+							"value": "1",
+							"description": "0 首页不展示 1 首页展示"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "修改课程上下架",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9saXZlYXBpLmNhbnBvaW50Lm5ldFwvYXBpXC9sb2dpbiIsImlhdCI6MTU3NDMwMzM3MCwiZXhwIjoxNTc0MzA2OTcwLCJuYmYiOjE1NzQzMDMzNzAsImp0aSI6IlhxMGJ2RlFSclRPUlh0bksiLCJzdWIiOjEsInBydiI6IjRjMTk5ZTc0ZDdmNzUzNzA0ZTQxNzU2NjQwYzIyZWRiYTI5YWU1ZjUifQ.K-cZoNWUeCBHn24Es5GxqFSpkpBYVteKtCMyAPt_Uqc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://www.local.com/index.php/api/update_status?id=1&status=0",
+					"protocol": "http",
+					"host": [
+						"www",
+						"local",
+						"com"
+					],
+					"path": [
+						"index.php",
+						"api",
+						"update_status"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						},
+						{
+							"key": "status",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "批量删除课程",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9saXZlYXBpLmNhbnBvaW50Lm5ldFwvYXBpXC9sb2dpbiIsImlhdCI6MTU3NDMwMzM3MCwiZXhwIjoxNTc0MzA2OTcwLCJuYmYiOjE1NzQzMDMzNzAsImp0aSI6IlhxMGJ2RlFSclRPUlh0bksiLCJzdWIiOjEsInBydiI6IjRjMTk5ZTc0ZDdmNzUzNzA0ZTQxNzU2NjQwYzIyZWRiYTI5YWU1ZjUifQ.K-cZoNWUeCBHn24Es5GxqFSpkpBYVteKtCMyAPt_Uqc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://www.local.com/index.php/api/delete_products?ids=1,2,3,4,5",
+					"protocol": "http",
+					"host": [
+						"www",
+						"local",
+						"com"
+					],
+					"path": [
+						"index.php",
+						"api",
+						"delete_products"
+					],
+					"query": [
+						{
+							"key": "ids",
+							"value": "1,2,3,4,5"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
